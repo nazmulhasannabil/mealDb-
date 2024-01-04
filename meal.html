@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-between px-[5%] py-10">
+        <h1 class="text-cyan-400 font-bold text-4xl">Meal Db</h1>
+        <div>
+            <input id="search-field" class=" border-2 border-slate-400 rounded-lg px-2 py-2" type="text" placeholder="Search">
+            <button onclick="searchMeal()" id="serch-btn" class="bg-sky-600 hover:bg-sky-400 px-2 py-2 rounded-lg mt-2 text-white font-semi-bold text-center">Search</button>
+        </div>
+    </div>
+
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="my_modal_1" class="modal rounded-lg">
+        <div class="modal-box bg-slate-400 p-5 rounded-lg">
+          <h3 id="meal-title" class="font-bold text-lg"></h3>
+          <p class="py-4 font-semibold">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn font-bold text-white bg-slate-800 hover:bg-slate-700 px-2 py-1 text-center rounded-lg">Close</button>
+            </form>
+          </div>
+        </div>
+    </dialog>
+
+    
+
+
+  
+  
+  <main>
+        <div class="px-[5%] flex justify-center items-center mx-auto gap-4">
+            <div id="meal-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto">
+                
+            </div>
+        </div>
+        
+  </main>
+  <script src="meal.js"></script>
+</body>
+</html>
